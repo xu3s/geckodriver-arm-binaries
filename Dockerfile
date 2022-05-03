@@ -18,7 +18,6 @@ RUN echo "deb http://ftp.hk.debian.org/debian/ bullseye main" >> /etc/apt/source
   && apt-get update -qqy \
   && apt install gcc build-essential git cargo ca-certificates curl --no-install-recommends -y \
   && curl https://sh.rustup.rs -sSf | bash -s -- -y \
-  && rustup update \
   && git clone https://github.com/mozilla/geckodriver.git && cd geckodriver \
   && git checkout v$GECKODRIVER_VERSION \
   && apt-get autoremove && apt-get clean \

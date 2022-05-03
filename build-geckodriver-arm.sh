@@ -1,6 +1,6 @@
 #!/bin/bash
 TARGET=${1:-release}
-source $HOME/.cargo/env
+. $HOME/.cargo/env
 
 if [ "$TARGET" = "release" ]; then
     cargo build --release

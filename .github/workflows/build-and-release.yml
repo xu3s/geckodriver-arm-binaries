@@ -10,7 +10,7 @@ jobs:
   build:
     strategy:
       matrix:
-        arch: [armv7l, aarch64]
+        arch: [aarch64]
     env:
       GECKODRIVER_VERSION: "0.31.0"
       ARCH: ${{ matrix.arch }}

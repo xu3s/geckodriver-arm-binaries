@@ -20,7 +20,6 @@ RUN echo "deb http://ftp.hk.debian.org/debian/ bullseye main" >> /etc/apt/source
   && apt remove cargo rustc -y\
   && apt autoremove -y \
   && curl https://sh.rustup.rs -sSf | bash -s -- -y \
-  && . $HOME/.cargo/env \
   && git clone https://github.com/mozilla/geckodriver.git && cd geckodriver \
   && git checkout v$GECKODRIVER_VERSION \
   && apt-get autoremove && apt-get clean \

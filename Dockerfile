@@ -17,7 +17,7 @@ WORKDIR /opt
 RUN echo "deb http://ftp.hk.debian.org/debian/ bullseye main" >> /etc/apt/sources.list \
   && apt-get update -qqy \
   && apt install gcc build-essential git cargo ca-certificates curl --no-install-recommends -y \
-  && apt remove rust -y \
+  && apt remove cargo rustc \
   && curl https://sh.rustup.rs -sSf | bash -s -- -y \
   && git clone https://github.com/mozilla/geckodriver.git && cd geckodriver \
   && git checkout v$GECKODRIVER_VERSION \
